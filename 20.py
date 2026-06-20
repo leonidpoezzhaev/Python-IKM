@@ -206,7 +206,7 @@ def main():
         choice = input("Выберите действие: ").strip()
 
         if choice == '1':
-            expr = input("Введите выражение: ").strip()
+            expr = input("\nВведите выражение: ").strip()
             if not expr:
                 print("Ошибка: пустое выражение")
                 continue
@@ -225,7 +225,7 @@ def main():
             values = {}
 
             if vars_set:
-                print("Переменные:", ', '.join(sorted(vars_set)))
+                print("\nПеременные:", ', '.join(sorted(vars_set)))
                 for v in sorted(vars_set):
                     while True:
                         val = input(f"  {v} = ")
@@ -249,20 +249,20 @@ def main():
                 continue
             try:
                 simplified = tree.simplify()
-                print("Было:", tree)
+                print("\nБыло:", tree)
                 print("Стало:", simplified)
                 ans = input("Заменить текущее выражение на упрощённое? (y/n): ").lower()
                 if ans == 'y':
                     tree = simplified
             except Exception as e:
-                print("Ошибка упрощения:", e)
+                print("\nОшибка упрощения:", e)
 
         elif choice == '0':
-            print("До свидания")
+            print("\nПрограмма выключена.")
             break
 
         else:
-            print("Неверный пункт, введите 0-3")
+            print("\nНеверный пункт, введите 0-3")
 
 
 if __name__ == "__main__":

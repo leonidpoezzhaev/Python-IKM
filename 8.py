@@ -212,7 +212,7 @@ def main():
         menu()
         choice = input("Выберите действие: ").strip()
         if choice == '0':
-            print("До свидания!")
+            print("\nПрограмма выключена.")
             break
 
         elif choice == '1':
